@@ -8,19 +8,21 @@ const Home = () => {
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
-        <div className="flex xl:flex-row items-center justify-between xl:pt-0 xl:pb-1">
-          <div className="text-center xl:text-left order-1 xl:order-none">
-            <h1 className="h2 mb-3">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+          <div className="text-center xl:text-left order-2 xl:order-none">
+            <h1 className="h2 mt-10">
               Hello I'm
               <br />
               <span className="text-indigo-600">AR.Papon</span>
             </h1>
-            <h3 className="text-animation text-xl text-orange-500">
+
+            <h3 className="text-animation  text-rose-300 mb-5 ">
               I'm a <span></span>
             </h3>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experience and i am proficient
-              in various programming language and tecnologiy
+              Passionate about creating intuitive and engaging user experiences.
+              Specialize in transforming ideas into beautifully crafted
+              products.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/cv.pdf" download="AR_Papon_CV.pdf">
@@ -41,7 +43,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-2 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>

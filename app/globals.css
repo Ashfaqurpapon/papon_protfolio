@@ -24,7 +24,7 @@
 }
 
 .text-animation {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   min-width: 280px;
 }
@@ -35,7 +35,7 @@
 
 .text-animation span::before {
   content: "Web Developer";
-  color: whitesmoke;
+
   animation: words 20s infinite;
 }
 
@@ -44,7 +44,7 @@
   background-color: rgb(28 28 34 / var(--tw-bg-opacity));
   position: absolute;
   width: calc(100% + 8px);
-  height: 80%;
+  height: 120%;
   border-left: 3px solid;
   right: -8px;
   animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
@@ -59,23 +59,23 @@
 @keyframes words {
   0%,
   20% {
-    content: "Frontend Designer";
+    content: "Web Developer";
   }
   21%,
   40% {
-    content: "Web Designer";
+    content: "Full Stack Developer";
   }
   41%,
   60% {
-    content: "UI/UX Designer";
+    content: "Competitive Programmer";
   }
   61%,
   80% {
-    content: "Web Developer";
+    content: "Software Engineer";
   }
   81%,
   100% {
-    content: "Software Engineer";
+    content: "Designer";
   }
 }
 
@@ -103,3 +103,5 @@
     width: calc(100% + 8px);
   }
 }
+
+/* Tailwind CSS styles in the code */
