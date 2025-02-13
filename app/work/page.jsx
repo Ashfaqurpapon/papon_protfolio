@@ -1,9 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
   Tooltip,
@@ -13,7 +10,7 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
-import WorkSliderBtn from "@/components/ui/workSliderBtn";
+import "./page.css";
 
 const projects = [
   {
@@ -22,13 +19,7 @@ const projects = [
     title: "car-rental-reservation-system",
     description:
       "This full-stack application is built with React and Redux on the frontend, and Express, TypeScript, MongoDB, and Mongoose on the backend. It offers comprehensive features such as user and admin roles enabling smooth authentication and authorization. The application supports full CRUD operations, allowing users to browse, book cars of their choice, and manage their bookings. Additionally, it incorporates robust transaction handling utilities to ensure a seamless booking experience.",
-    stack: [
-      { name: "React" },
-      { name: "ExpressJs" },
-      { name: "NodeJs" },
-      { name: "NextJs" },
-      { name: "DaisyUI" },
-    ],
+    stack: ["React", "NodeJs", "NextJs", "DaisyUI", "ExpressJs"],
     image: "/project1.png",
     live: "https://car-rental-reseration-system.vercel.app/",
     github: "https://github.com/Ashfaqurpapon/car-rental-reservation-system",
@@ -39,29 +30,29 @@ const projects = [
     title: "campers-shop",
     description:
       "Campers Shop is an e-commerce website built using React, Tailwind CSS, and Redux for state management. It provides a seamless shopping experience for camping enthusiasts with features like product management, cart functionality, and a smooth checkout process.",
-    stack: [{ name: "React" }, { name: "Tailwind CSS" }, { name: "Redux" }],
+    stack: ["React", "Tailwind CSS", "Redux"],
     image: "/project2.png",
     live: "https://campers-shop-virid.vercel.app/",
-    github: "https://github.com/Ashfaqurpapon/campers-shop?tab=readme-ov-file",
+    github: "https://github.com/Ashfaqurpapon/campers-shop",
   },
   {
     num: "03",
-    category: "Frontend Project",
+    category: "React Project",
     title: "Track Zone Clock ",
     description:
       "This is  Create a beautiful clock with its own timezone using React. Use custom hooks to manage time updates and timezone handling, then display the clock with a stylish component.",
-    stack: [{ name: "React" }, { name: "Css 3" }, { name: "JavaScript" }],
+    stack: ["React", "Css 3", "JavaScript"],
     image: "/project3.png",
     live: "https://track-zone-clock.vercel.app/",
     github: "https://github.com/Ashfaqurpapon/Track_Zone_Clock",
   },
   {
     num: "04",
-    category: "Frontend Project",
+    category: " Project",
     title: "ProgrammingGuideline ",
     description:
       "This is  Design and develop a responsive, single-page web page using HTML, CSS, Bootstrap, and PHP to demonstrate proficiency in front-end web development",
-    stack: [{ name: "HTMl" }, { name: "CSS" }, { name: "Broostab" }],
+    stack: ["HTMl", "CSS", "Broostab"],
     image: "/project4.png",
     live: "https://ashfaqurpapon.github.io/Programming_Guideline/",
     github: "https://github.com/Ashfaqurpapon/Programming_Guideline",
@@ -69,12 +60,6 @@ const projects = [
 ];
 
 const Work = () => {
-  const [project, setProject] = useState(projects[0]);
-  const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex;
-    setProject(projects[currentIndex]);
-  };
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -85,27 +70,33 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col justify-center py-10 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[360px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="flex flex-col xl:flex-row xl:gap-[30px] mb-20"
+          >
+            {/* Left Side: Text Content */}
+            <div className="w-full xl:w-[50%] flex flex-col justify-center">
+              <div className="text-7xl font-extrabold text-transparent text-outline mb-10">
                 {project.num}
               </div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              <h2 className=" mb-3 text-[35px] font-bold leading-none text-green-300">
                 {project.category}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => (
-                  <li key={index} className="text-xl text-accent">
-                    {item.name}
-                    {index < project.stack.length - 1 && ","}
+              <ul className="flex gap-4 mt-4">
+                {project.stack.map((tech, i) => (
+                  <li key={i} className="text-xl text-accent">
+                    {tech}
+                    {i !== project.stack.length - 1 && ","}
                   </li>
                 ))}
               </ul>
-              <div className="border border-white/20"></div>
+
+              {/* Links */}
+              <div className="border border-white/20 my-4"></div>
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -117,7 +108,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -131,44 +122,26 @@ const Work = () => {
                 </Link>
               </div>
             </div>
+
+            {/* Right Side: Image */}
+            <div className="w-full xl:w-[50%] xl:mt-0 mt-10 flex items-center justify-center">
+              <div className="relative w-full h-[330px]">
+                <Image
+                  src={project.image}
+                  fill
+                  className="object-cover rounded-lg shadow-lg"
+                  alt={project.title}
+                />
+                <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white bg-black/60 px-3 py-1 rounded">
+                  {project.title}
+                </h3>
+              </div>
+            </div>
           </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => (
-                <SwiperSlide
-                  key={index}
-                  className="h-[460px] relative group flex justify-center items-center bg-pink-50/20"
-                >
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={project.image}
-                      fill
-                      className="object-cover"
-                      alt={project.title}
-                    />
-                  </div>
-                  {/* Project Title */}
-                  <h3 className="absolute bottom-4 text-2xl font-bold text-white z-20">
-                    {project.title}
-                  </h3>
-                </SwiperSlide>
-              ))}
-              <WorkSliderBtn
-                containerStyles="flex justify-center gap-2"
-                btnStyles="p-2 bg-gray-800 rounded-full"
-                iconsStyles="text-2xl text-white"
-              />
-            </Swiper>
-          </div>
-        </div>
+        ))}
       </div>
     </motion.section>
   );
 };
+
 export default Work;
