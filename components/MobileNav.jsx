@@ -11,16 +11,16 @@ const links = [
     path: "/",
   },
   {
-    name: "services",
-    path: "/services",
+    name: "work",
+    path: "/work",
   },
   {
     name: "resume",
     path: "/resume",
   },
   {
-    name: "work",
-    path: "/work",
+    name: "services",
+    path: "/services",
   },
   {
     name: "contact",
@@ -40,7 +40,7 @@ const MobileNav = () => {
         <div className="mt-30 mb-20 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
-              Paps<span className="text-accent">.</span>
+              AR.Papon<span className="text-accent">.</span>
             </h1>
           </Link>
         </div>
