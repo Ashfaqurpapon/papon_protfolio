@@ -16,8 +16,8 @@ const Home = () => {
       }}
     >
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
+        <div className="flex flex-col items-center justify-between xl:flex-row  xl:pt-8 xl:pb-24">
+          <div className="text-center  order-2 xl:text-left xl:order-none">
             <h1 className="h2 mt-10">
               Hello I'm
               <br />
@@ -32,7 +32,7 @@ const Home = () => {
               Specialize in transforming ideas into beautifully crafted
               products.
             </p>
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col items-center gap-8 xl:flex-row ">
               <a href="/cv.pdf" download="AR_Papon_CV.pdf">
                 <Button
                   variant="outline"
@@ -51,7 +51,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1  mb-8 xl:mb-0 xl:order-none">
             <Photo />
           </div>
         </div>

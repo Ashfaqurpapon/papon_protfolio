@@ -19,7 +19,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[300px] h-[300px] xl:w-[480px] xl:h-[480px]  absolute"
+          className="w-[300px] h-[300px]  absolute xl:w-[480px] xl:h-[480px] "
         >
           <Image
             src="/papon-removebg-preview.png"
@@ -34,7 +34,7 @@ const Photo = () => {
         {/* circle */}
 
         <motion.svg
-          className="w-[300px] xl:w-[505px] h-[300px] xl:h-[506px] "
+          className="w-[300px]  h-[300px] xl:w-[505px] xl:h-[506px] "
           fill="transparent"
           viewBox="0 -5 450 490"
           xmlns="http://www.w3.org/2000/svg"
