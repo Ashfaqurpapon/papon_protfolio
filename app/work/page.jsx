@@ -16,21 +16,21 @@ const projects = [
   {
     num: "01",
     category: "Full Stack Project",
-    title: "car-rental-reservation-system",
+    title: "CarRent CO.",
     description:
-      "This full-stack application is built with React and Redux on the frontend, and Express, TypeScript, MongoDB, and Mongoose on the backend. It offers comprehensive features such as user and admin roles enabling smooth authentication and authorization. The application supports full CRUD operations, allowing users to browse, book cars of their choice, and manage their bookings. Additionally, it incorporates robust transaction handling utilities to ensure a seamless booking experience.",
-    stack: ["React", "NodeJs", "NextJs", "DaisyUI", "ExpressJs"],
+      "This full-stack application is built with React and Redux on the frontend, and Express, TypeScript, MongoDB on the backend. It offers comprehensive features such as user and admin roles enabling smooth authentication and authorization. The application supports full CRUD operations, allowing users to browse, book cars of their choice, and manage their bookings. Additionally, it incorporates robust transaction handling utilities to ensure a seamless booking experience.",
+    stack: ["React", "DaisyUI", "NodeJs", "ExpressJs", "MongoDB"],
     image: "/project1.png",
     live: "https://car-rental-reseration-system.vercel.app/",
     github: "https://github.com/Ashfaqurpapon/car-rental-reservation-system",
   },
   {
     num: "02",
-    category: "Frontend Project",
-    title: "campers-shop",
+    category: "Full Stack Website",
+    title: "Techtip",
     description:
-      "Campers Shop is an e-commerce website built using React, Tailwind CSS, and Redux for state management. It provides a seamless shopping experience for camping enthusiasts with features like product management, cart functionality, and a smooth checkout process.",
-    stack: ["React", "Tailwind CSS", "Redux"],
+      "Techtip is a full-stack  Website where users can discover, share, and upvote tech-related tips, tutorials, and reviews.It interactive elements include secure authentication (JWT),Like, comments, and a follower, following system for tech enthusiasts.",
+    stack: ["NextJs", "NodeJs", "ExpressJs", "MongoDB"],
     image: "/project2.png",
     live: "https://campers-shop-virid.vercel.app/",
     github: "https://github.com/Ashfaqurpapon/campers-shop",

@@ -29,7 +29,7 @@ import { motion } from "framer-motion";
 const about = {
   title: "About me",
   description:
-    "Hello! I’m Ashfaqur Rahman Papon, a dedicated full-stack developer with a year of experience in building dynamic web applications. I have a strong command over modern technologies like React, Node.js, Express, and REST APIs. With a keen eye for detail and a commitment to delivering high-quality work, I am available for freelance opportunities. Fluent in both English and Bangla, I’m eager to collaborate on innovative projects that challenge my skills and foster growth.*",
+    "Hello! I’m Ashfaqur Rahman Papon, a dedicated full-stack developer with a year of experience in building dynamic web applications. I have a strong command over modern technologies like NextJs,React, Node.js, Express, and REST APIs. With a keen eye for detail and a commitment to delivering high-quality work, I am available for freelance opportunities. Fluent in both English and Bangla, I’m eager to collaborate on innovative projects that challenge my skills and foster growth.*",
   info: [
     {
       fieldName: "Name",
@@ -65,42 +65,18 @@ const about = {
 const experience = {
   icon: "",
   title: "My Experience",
-  description: "pajdionfjnonkoscnaskocnoancoasnconasovnasosvnkoavnasknsa",
+  description:
+    "Throughout my journey in the tech world, I have embraced challenges, solved complex problems, and continuously expanded my knowledge. My experience spans software development and competitive programming, allowing me to build scalable solutions while sharpening my algorithmic thinking.From developing full-stack applications to competing in coding challenges, each role has contributed to my growth as a developer.",
   items: [
     {
-      company: "Tech Solution Inc.",
+      company: " LabFry Technology.",
       position: "Full Stack Developer",
-      duration: "2022 - present",
+      duration: "Jul 2024 – Feb 2025",
     },
     {
-      company: "Tech Solution Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - present",
-    },
-    {
-      company: "Tech Solution Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - present",
-    },
-    {
-      company: "Tech Solution Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - present",
-    },
-    {
-      company: "Tech Solution Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - present",
-    },
-    {
-      company: "Tech Solution Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - present",
-    },
-    {
-      company: "Tech Solution Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - present",
+      company: " Competitive programer",
+      position: "C/C++",
+      duration: "Jan 2020 – Present",
     },
   ],
 };
@@ -200,15 +176,15 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
+                  {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className=" grid grid-cols-1 lg:grid-cols-2 gap-[30px] ">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] shadow-lg shadow-red-700  h-[300px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3
@@ -241,7 +217,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] shadow-lg shadow-red-700  h-[300px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3
