@@ -5,59 +5,442 @@ import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaFigma,
+  FaNodeJs,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiRedux,
+  SiDaisyui,
+  SiShadcnui,
+  SiExpress,
+} from "react-icons/si";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+const projects = [
+  {
+    num: "01",
+    category: "Full Stack Website",
+    title: "Techtip",
+    description:
+      "Techtip is a full-stack Website where users can discover, share, and upvote tech-related tips, tutorials, and reviews. It interactive elements include secure authentication (JWT), Like, comments, and a follower, following system for tech enthusiasts.",
+    stack: ["NextJs", "Redux", "NodeJs", "ExpressJs", "MongoDB"],
+    image: "/project2.png",
+    live: "https://tech-tip.onrender.com/",
+    github: "https://github.com/Ashfaqurpapon/TechTip",
+  },
+  {
+    num: "02",
+    category: "MERN Stack Project",
+    title: "CarRent CO.",
+    description:
+      "This MERN-stack application is built with React and Redux on the frontend, and Express, TypeScript, MongoDB on the backend. It offers comprehensive features such as user and admin roles enabling smooth authentication and authorization.",
+    stack: ["React", "DaisyUI", "NodeJs", "ExpressJs", "MongoDB"],
+    image: "/project1.png",
+    live: "https://car-rental-reseration-system.vercel.app/",
+    github: "https://github.com/Ashfaqurpapon/car-rental-reservation-system",
+  },
+  {
+    num: "03",
+    category: "React Project",
+    title: "Track Zone Clock",
+    description:
+      "Create a beautiful clock with its own timezone using React. Use custom hooks to manage time updates and timezone handling, then display the clock with a stylish component.",
+    stack: ["React", "Css 3", "JavaScript"],
+    image: "/project3.png",
+    live: "https://track-zone-clock.vercel.app/",
+    github: "https://github.com/Ashfaqurpapon/Track_Zone_Clock",
+  },
+  {
+    num: "04",
+    category: "Frontend Project",
+    title: "Programming Guideline",
+    description:
+      "Design and develop a responsive, single-page web page using HTML, CSS, Bootstrap, and PHP to demonstrate proficiency in front-end web development",
+    stack: ["HTML", "CSS", "Bootstrap"],
+    image: "/project4.png",
+    live: "https://ashfaqurpapon.github.io/Programming_Guideline/",
+    github: "https://github.com/Ashfaqurpapon/Programming_Guideline",
+  },
+];
+
+const services = [
+  {
+    num: "01",
+    title: "Full-Stack Website Development",
+    description:
+      "Expert full-stack developer skilled in building seamless web applications. With expertise in Express, Node.js, and React, I create efficient and responsive user interfaces with secure, reliable, and scalable backend operations.",
+  },
+  {
+    num: "02",
+    title: "MERN Stack Development",
+    description:
+      "Specialized in building visually engaging, user-centric interfaces with in-depth knowledge of React. I create responsive, interactive designs that provide smooth and enjoyable user experiences with clean, maintainable code.",
+  },
+  {
+    num: "03",
+    title: "Tech Tutor & Learner",
+    description:
+      "Quick learner—adaptable and eager to absorb new concepts and technologies. I thrive in dynamic environments, rapidly picking up new skills and applying them effectively to deliver results efficiently.",
+  },
+  {
+    num: "04",
+    title: "Competitive Programmer",
+    description:
+      "Fueled by the thrill of solving complex algorithmic problems. With a solid foundation in data structures and algorithms, I approach challenges methodically and find optimized solutions.",
+  },
+];
+
+const skills = [
+  { icon: <FaHtml5 />, name: "Html 5" },
+  { icon: <FaCss3 />, name: "CSS 3" },
+  { icon: <FaJs />, name: "JavaScript" },
+  { icon: <FaReact />, name: "React" },
+  { icon: <FaNodeJs />, name: "NodeJS" },
+  { icon: <SiExpress />, name: "ExpressJS" },
+  { icon: <SiTailwindcss />, name: "Tailwindcss" },
+  { icon: <SiNextdotjs />, name: "NextJs" },
+  { icon: <SiRedux />, name: "Redux" },
+  { icon: <SiDaisyui />, name: "Daisyui" },
+  { icon: <SiShadcnui />, name: "Shadcnui" },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 const Home = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2, duration: 0.4, ease: "easeInOut" },
-      }}
-    >
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col items-center justify-between xl:flex-row  xl:pt-8 xl:pb-24">
-          <div className="text-center  order-2 xl:text-left xl:order-none">
-            <h1 className="h2 mt-10">
-              Hello I'm
-              <br />
-              <span className="text-indigo-600">AR.Papon</span>
-            </h1>
+    <div className="overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="min-h-screen flex items-center justify-center py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 0.2, duration: 0.4, ease: "easeInOut" },
+          }}
+          className="container mx-auto px-4"
+        >
+          <div className="flex flex-col items-center justify-between lg:flex-row gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="flex-1 text-center lg:text-left"
+            >
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
+              >
+                Hello, I'm
+                <br />
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                  AR. Papon
+                </span>
+              </motion.h1>
 
-            <h3 className="text-animation  text-rose-300 mb-5 ">
-              I'm a <span></span>
-            </h3>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              Passionate about creating intuitive and engaging user experiences.
-              Specialize in transforming ideas into beautifully crafted
-              products.
-            </p>
-            <div className="flex flex-col items-center gap-8 xl:flex-row ">
-              <a href="/cv.pdf" download="AR_Papon_CV.pdf">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
-              </a>
-              <div className="mb-8 xl:mb-0">
-                <Social
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
-                />
-              </div>
-            </div>
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="text-xl md:text-2xl text-cyan-400 mb-6"
+              >
+                Full-Stack Developer & Creative Problem Solver
+              </motion.h3>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+                className="max-w-[500px] mb-10 text-white/70 text-lg"
+              >
+                Passionate about creating intuitive and engaging user experiences. I specialize in transforming ideas into beautifully crafted products with modern web technologies.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                className="flex flex-col sm:flex-row items-center gap-8 justify-center lg:justify-start"
+              >
+                <a href="/cv.pdf" download="AR_Papon_CV.pdf">
+                  <Button className="uppercase flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg">
+                    <span>Download CV</span>
+                    <FiDownload className="text-xl" />
+                  </Button>
+                </a>
+                <div>
+                  <Social
+                    containerStyles="flex gap-6"
+                    iconStyles="w-10 h-10 border-2 border-cyan-400 rounded-full flex justify-center items-center text-cyan-400 text-base hover:bg-cyan-400 hover:text-dark hover:transition-all duration-500"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="flex-1"
+            >
+              <Photo />
+            </motion.div>
           </div>
-          <div className="order-1  mb-8 xl:mb-0 xl:order-none">
-            <Photo />
-          </div>
-        </div>
-      </div>
+        </motion.div>
+      </section>
+
+      {/* STATS SECTION */}
       <Stats />
-    </motion.div>
+
+      {/* ABOUT SECTION */}
+      <section className="py-20">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="container mx-auto px-4"
+        >
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            About <span className="text-cyan-400">Me</span>
+          </motion.h2>
+
+          <motion.div variants={itemVariants} className="max-w-3xl mx-auto">
+            <p className="text-white/70 text-lg leading-relaxed mb-6">
+              I'm Ashfaqur Rahman Papon, a dedicated full-stack developer with extensive experience in building dynamic web applications. I have a strong command over modern technologies like Next.js, React, Node.js, Express, and REST APIs.
+            </p>
+            <p className="text-white/70 text-lg leading-relaxed">
+              With a keen eye for detail and a commitment to delivering high-quality work, I'm available for freelance opportunities. Fluent in both English and Bangla, I'm eager to collaborate on innovative projects that challenge my skills and foster growth.
+            </p>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* SKILLS SECTION */}
+      <section className="py-20 bg-white/5">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="container mx-auto px-4"
+        >
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            My <span className="text-cyan-400">Skills</span>
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+          >
+            {skills.map((skill, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger className="w-full h-[120px] bg-white/10 rounded-xl flex justify-center items-center group hover:bg-cyan-500/20 transition-all duration-300 cursor-pointer border border-white/10 hover:border-cyan-400">
+                      <div className="text-5xl text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                        {skill.icon}
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent className="bg-cyan-600">
+                      <p className="capitalize">{skill.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* SERVICES SECTION */}
+      <section className="py-20">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="container mx-auto px-4"
+        >
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            My <span className="text-cyan-400">Services</span>
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-cyan-400 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="text-5xl font-bold text-cyan-400/30 group-hover:text-cyan-400 transition-colors duration-300">
+                    {service.num}
+                  </div>
+                  <h3 className="text-2xl font-bold group-hover:text-cyan-400 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-white/60 leading-relaxed">{service.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* PROJECTS SECTION */}
+      <section className="py-20 bg-white/5">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="container mx-auto px-4"
+        >
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            Featured <span className="text-cyan-400">Projects</span>
+          </motion.h2>
+
+          <div className="space-y-20">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="flex flex-col lg:flex-row gap-12 items-center"
+              >
+                <div className="flex-1">
+                  <div className="text-7xl font-bold text-cyan-400/20 mb-4">
+                    {project.num}
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3 text-cyan-400">
+                    {project.category}
+                  </h3>
+                  <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+                  <p className="text-white/60 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {project.stack.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg text-sm border border-cyan-400/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Link href={project.live} target="_blank">
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group border border-white/10 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-300">
+                            <BsArrowUpRight className="text-white text-3xl group-hover:text-cyan-400" />
+                          </TooltipTrigger>
+                          <TooltipContent className="bg-cyan-600">
+                            <p>Live project</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                    <Link href={project.github} target="_blank">
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group border border-white/10 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-300">
+                            <BsGithub className="text-white text-3xl group-hover:text-cyan-400" />
+                          </TooltipTrigger>
+                          <TooltipContent className="bg-cyan-600">
+                            <p>GitHub Repository</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div className="relative w-full h-[300px] lg:h-[400px] group">
+                    <Image
+                      src={project.image}
+                      fill
+                      className="object-cover rounded-xl shadow-2xl group-hover:shadow-cyan-500/50 transition-all duration-300"
+                      alt={project.title}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section className="py-20">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="container mx-auto px-4 text-center"
+        >
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-6">
+            Let's Work <span className="text-cyan-400">Together</span>
+          </motion.h2>
+          <motion.p
+            variants={itemVariants}
+            className="max-w-2xl mx-auto text-white/70 text-lg mb-12"
+          >
+            I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to collaborate!
+          </motion.p>
+          <motion.div variants={itemVariants}>
+            <Link href="mailto:ashfaqurraham377@gmail.com">
+              <Button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg">
+                Get in Touch
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </section>
+    </div>
   );
 };
+
 export default Home;

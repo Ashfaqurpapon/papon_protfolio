@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #0f172a;
+  --foreground: #ffffff;
+  --dark: #0f172a;
+  --accent: #06b6d4;
+  --accent-dark: #0891b2;
+  --surface: #1e293b;
+  --surface-light: #334155;
+}
+
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply bg-[#0f172a] text-white leading-relaxed;
   }
+  
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }
