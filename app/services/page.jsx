@@ -9,7 +9,7 @@ const services = [
     title: "Full-Stack Website Development",
     description:
       "I am a full-stack developer skilled in building seamless web applications from front to back. With expertise in Express, Node.js, and React, I create efficient and responsive user interfaces. My experience with REST APIs and JWT ensures secure, reliable, and scalable backend operations. I deliver end-to-end solutions that bridge design and functionality, bringing ideas to life with elegance and precision.",
-    href: "https://tech-tip.onrender.com/",
+    href: "https://www.patabahari.com/",
   },
   {
     num: "02",
@@ -20,18 +20,34 @@ const services = [
   },
   {
     num: "03",
-    title: "Tech-Related Tutor",
+    title: "E-learning & SaaS Development",
     description:
-      "I am a quick learner—adaptable and eager to absorb new concepts and technologies with ease. I thrive in dynamic environments, rapidly picking up new skills and applying them effectively. My ability to grasp complex ideas quickly allows me to stay agile, grow continuously, and deliver results efficiently, regardless of the challenge or learning curve.",
-    href: "https://github.com/Ashfaqurpapon",
+      "Design and develop scalable e-learning and SaaS platforms with secure authentication, role-based access, and cloud deployment, optimized for performance and long-term growth.",
+    href: "https://tech-tip.onrender.com/",
   },
   {
     num: "04",
+    title: "Cloud & DevOps Deployment",
+    description:
+      "Skilled in containerizing and deploying applications using Docker and cloud platforms, ensuring production-ready builds, efficient CI/CD workflows, and scalable infrastructure.",
+    href: "https://github.com/Ashfaqurpapon",
+  },
+  {
+    num: "05",
+    title: "Tech Tutor & Continuous Learner",
+    description:
+      "A fast learner with a passion for teaching and continuous improvement. I quickly adapt to new technologies and share knowledge to help teams grow and deliver impactful solutions.",
+    href: "https://github.com/Ashfaqurpapon",
+  },
+
+  {
+    num: "06",
     title: "Competitive Programmer",
     description:
       "I am a competitive programmer fueled by the thrill of solving complex algorithmic problems under pressure. With a solid foundation in data structures and algorithms, I approach challenges methodically. I enjoy finding optimized solutions, pushing my limits, and constantly sharpening my skills to stay at the forefront of competitive coding.",
     href: "https://www.stopstalk.com/user/profile/arpapon",
   },
+
 ];
 
 const Services = () => {

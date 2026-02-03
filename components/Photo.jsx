@@ -22,7 +22,7 @@ const Photo = () => {
           className="w-[300px] h-[300px]  absolute xl:w-[480px] xl:h-[480px] "
         >
           <Image
-            src="/papon-removebg-preview.png"
+            src="/papon2.png"
             priority
             quality={100}
             fill

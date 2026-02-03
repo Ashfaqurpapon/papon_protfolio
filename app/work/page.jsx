@@ -15,14 +15,14 @@ import "./page.css";
 const projects = [
   {
     num: "01",
-    category: "Full Stack Website",
-    title: "Techtip",
+    category: "E-commerce Website",
+    title: "Patabahari.com",
     description:
-      "Techtip is a full-stack  Website where users can discover, share, and upvote tech-related tips, tutorials, and reviews.It interactive elements include secure authentication (JWT),Like, comments, and a follower, following system for tech enthusiasts.",
+      "Patabahari is an online gardening e-commerce platform that allows users to browse and purchase plants, gardening tools, and related products. The platform features secure authentication, product management, cart and order handling, and a scalable backend designed for smooth and reliable shopping experiences.",
     stack: ["NextJs", "Redux", "NodeJs", "ExpressJs", "MongoDB"],
-    image: "/project2.png",
-    live: "https://tech-tip.onrender.com/",
-    github: "https://github.com/Ashfaqurpapon/TechTip",
+    image: "/patabahri.png",
+    live: "https://patabahari.com",
+    github: "https://github.com/Ashfaqurpapon/plant-shop",
   },
   {
     num: "02",
@@ -37,6 +37,18 @@ const projects = [
   },
   {
     num: "03",
+    category: "Saas Project",
+    title: "Techtip",
+    description:
+      "Techtip is a Saas Project where users can discover, share, and upvote tech-related tips, tutorials, and reviews. It interactive elements include secure authentication (JWT), Like, comments, and a follower, following system for tech enthusiasts.",
+    stack: ["NextJs", "Redux", "NodeJs", "ExpressJs", "MongoDB"],
+    image: "/project2.png",
+    live: "https://tech-tip.onrender.com/",
+    github: "https://github.com/Ashfaqurpapon/TechTip",
+  },
+
+  {
+    num: "04",
     category: "React Project",
     title: "Track Zone Clock ",
     description:
@@ -47,8 +59,8 @@ const projects = [
     github: "https://github.com/Ashfaqurpapon/Track_Zone_Clock",
   },
   {
-    num: "04",
-    category: " Project",
+    num: "05",
+    category: "Frontend Project",
     title: "ProgrammingGuideline ",
     description:
       "This is  Design and develop a responsive, single-page web page using HTML, CSS, Bootstrap, and PHP to demonstrate proficiency in front-end web development",

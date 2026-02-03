@@ -19,7 +19,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+880) 1744164273 ",
+    description: "(+880) 1609520908",
   },
   {
     icon: <FaEnvelope />,
@@ -29,7 +29,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "sylhet,Bangladesh",
+    description: "Dhaka,Bangladesh",
   },
 ];
 
@@ -51,7 +51,7 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">lets work togeather </h3>
               <p className="text-white/60">
-                sdjifn sdjkosd dsjskon sdkfjmsdkjfksdnf idsjfksdksdnksdns
+                I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to collaborate!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />

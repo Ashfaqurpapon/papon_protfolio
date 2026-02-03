@@ -16,6 +16,17 @@ import {
   SiDaisyui,
   SiShadcnui,
   SiExpress,
+  SiTypescript,
+  SiNestjs,
+  SiApachekafka,
+  SiRedis,
+  SiMongodb,
+  SiMongoose,
+  SiPostgresql,
+  SiPrisma,
+  SiDocker,
+  SiPostman,
+  SiSourcetree,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -29,7 +40,7 @@ import { motion } from "framer-motion";
 const about = {
   title: "About me",
   description:
-    "Hello! I’m Ashfaqur Rahman Papon, a dedicated full-stack developer with a year of experience in building dynamic web applications. I have a strong command over modern technologies like NextJs,React, Node.js, Express, and REST APIs. With a keen eye for detail and a commitment to delivering high-quality work, I am available for freelance opportunities. Fluent in both English and Bangla, I’m eager to collaborate on innovative projects that challenge my skills and foster growth.*",
+    "Hello! I’m Ashfaqur Rahman Papon, a dedicated Software Engineer with one & half year of experience in building dynamic web applications. I have a strong command over modern technologies like NextJs,React, Node.js, Express, and REST APIs. With a keen eye for detail and a commitment to delivering high-quality work, I am available for freelance opportunities. Fluent in both English and Bangla, I’m eager to collaborate on innovative projects that challenge my skills and foster growth.",
   info: [
     {
       fieldName: "Name",
@@ -41,7 +52,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "1 years",
+      fieldValue: "1.5 years",
     },
 
     {
@@ -69,14 +80,24 @@ const experience = {
     "Throughout my journey in the tech world, I have embraced challenges, solved complex problems, and continuously expanded my knowledge. My experience spans software development and competitive programming, allowing me to build scalable solutions while sharpening my algorithmic thinking.From developing full-stack applications to competing in coding challenges, each role has contributed to my growth as a developer.",
   items: [
     {
+      company: " SoftTool Solutions",
+      position: "MERN Stack Developer",
+      duration: "Oct 2025 – Present",
+    },
+    {
+      company: " TS4U IT Engineering Bootcamp",
+      position: "Backend Developer",
+      duration: "May 2024 – Aug 2025",
+    },
+    {
       company: " LabFry Technology.",
-      position: "Full Stack Developer",
+      position: "Web Developer",
       duration: "Jul 2024 – Feb 2025",
     },
     {
       company: " Competitive programer",
       position: "C/C++",
-      duration: "Jan 2020 – Present",
+      duration: "Jan 2020 – Dec 2023",
     },
   ],
 };
@@ -90,7 +111,7 @@ const education = {
     {
       institution: "Metropolitan University",
       degree: "BSc in CSE",
-      duration: "2020 - 2023",
+      duration: "2020 - 2024",
     },
     {
       institution: "Sylhet Government College",
@@ -108,45 +129,32 @@ const education = {
 const skills = {
   title: "My Skill",
   description:
-    "With a versatile skill set in front-end and back-end development, I am equipped to build full-stack applications that are responsive, scalable, and user-centric. My expertise spans essential technologies such as HTML5, JavaScript, and React for creating dynamic interfaces, alongside NodeJS and ExpressJS for robust server-side functionality. I also incorporate modern styling frameworks like Tailwind CSS, DaisyUI, and ShadcnUI to ensure beautiful and functional design, with Redux providing efficient state management to optimize application performance.",
+    "A versatile full-stack developer with strong expertise in modern JavaScript and TypeScript ecosystems. Skilled in building responsive and user-focused interfaces using React and Next.js, supported by efficient state management with Redux. Experienced in developing scalable backend systems with Node.js, Express, and NestJS, alongside event-driven technologies like Kafka and Redis. Proficient in working with both NoSQL and SQL databases, containerization with Docker, and modern development tools to deliver production-ready applications.",
   skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "Html 5",
-    },
-    {
-      icon: <FaJs />,
-      name: "JavaScript",
-    },
-    {
-      icon: <FaReact />,
-      name: "React",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "NodeJS",
-    },
-    {
-      icon: <SiExpress />,
-      name: "ExpressJS",
-    },
-
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwindcss",
-    },
-    {
-      icon: <SiRedux />,
-      name: "Redux",
-    },
-    {
-      icon: <SiDaisyui />,
-      name: "Daisyui",
-    },
-    {
-      icon: <SiShadcnui />,
-      name: "Shadcnui",
-    },
+     { icon: <FaJs />, name: "JavaScript" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiNextdotjs />, name: "NextJs" },
+      { icon: <SiNestjs />, name: "NestJs" },
+      { icon: <FaReact />, name: "React" },
+      { icon: <SiRedux />, name: "Redux" },
+      { icon: <SiDaisyui />, name: "Daisyui" },
+      { icon: <SiShadcnui />, name: "Shadcnui" },
+      { icon: <SiTailwindcss />, name: "Tailwindcss" },
+    
+      { icon: <FaNodeJs />, name: "NodeJS" },
+      { icon: <SiExpress />, name: "ExpressJS" },
+    
+      { icon: <SiApachekafka />, name: "Apachekafka" },
+      { icon: <SiRedis />, name: "Redis" },
+    
+      { icon: <SiMongodb />, name: "MongoDb" },
+      { icon: <SiMongoose />, name: "Mongoose" },
+      { icon: <SiPostgresql />, name: "PostgresSQL" },
+      { icon: <SiPrisma />, name: "Prisma" },
+    
+      { icon: <SiDocker />, name: "Docker" },
+      { icon: <SiPostman />, name: "Postman" },
+      { icon: <SiSourcetree />, name: "Sourcetree" },
   ],
 };
 
@@ -178,7 +186,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <div className="h-[400px]">
                   <ul className=" grid grid-cols-1 lg:grid-cols-2 gap-[30px] ">
                     {experience.items.map((item, index) => {
                       return (
@@ -202,7 +210,7 @@ const Resume = () => {
                       );
                     })}
                   </ul>
-                </ScrollArea>
+                </div>
               </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
@@ -211,7 +219,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <div className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
@@ -235,7 +243,7 @@ const Resume = () => {
                       );
                     })}
                   </ul>
-                </ScrollArea>
+                </div>
               </div>
             </TabsContent>
             <TabsContent value="skills" className="w-full h-full">

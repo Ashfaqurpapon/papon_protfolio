@@ -24,6 +24,17 @@ import {
   SiDaisyui,
   SiShadcnui,
   SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiNestjs,
+  SiPostgresql,
+  SiSourcetree,
+  SiDocker,
+  SiPostman,
+  SiTypescript,
+  SiPrisma,
+  SiApachekafka,
+  SiRedis,
 } from "react-icons/si";
 import {
   Tooltip,
@@ -35,15 +46,16 @@ import {
 const projects = [
   {
     num: "01",
-    category: "Full Stack Website",
-    title: "Techtip",
+    category: "E-commerce Website",
+    title: "Patabahari.com",
     description:
-      "Techtip is a full-stack Website where users can discover, share, and upvote tech-related tips, tutorials, and reviews. It interactive elements include secure authentication (JWT), Like, comments, and a follower, following system for tech enthusiasts.",
+      "Patabahari is an online gardening e-commerce platform that allows users to browse and purchase plants, gardening tools, and related products. The platform features secure authentication, product management, cart and order handling, and a scalable backend designed for smooth and reliable shopping experiences.",
     stack: ["NextJs", "Redux", "NodeJs", "ExpressJs", "MongoDB"],
-    image: "/project2.png",
-    live: "https://tech-tip.onrender.com/",
-    github: "https://github.com/Ashfaqurpapon/TechTip",
+    image: "/patabahri.png",
+    live: "https://patabahari.com",
+    github: "https://github.com/Ashfaqurpapon/plant-shop",
   },
+ 
   {
     num: "02",
     category: "MERN Stack Project",
@@ -55,28 +67,39 @@ const projects = [
     live: "https://car-rental-reseration-system.vercel.app/",
     github: "https://github.com/Ashfaqurpapon/car-rental-reservation-system",
   },
-  {
+   {
     num: "03",
-    category: "React Project",
-    title: "Track Zone Clock",
+    category: "Saas Project",
+    title: "Techtip",
     description:
-      "Create a beautiful clock with its own timezone using React. Use custom hooks to manage time updates and timezone handling, then display the clock with a stylish component.",
-    stack: ["React", "Css 3", "JavaScript"],
-    image: "/project3.png",
-    live: "https://track-zone-clock.vercel.app/",
-    github: "https://github.com/Ashfaqurpapon/Track_Zone_Clock",
+      "Techtip is a Saas Project where users can discover, share, and upvote tech-related tips, tutorials, and reviews. It interactive elements include secure authentication (JWT), Like, comments, and a follower, following system for tech enthusiasts.",
+    stack: ["NextJs", "Redux", "NodeJs", "ExpressJs", "MongoDB"],
+    image: "/project2.png",
+    live: "https://tech-tip.onrender.com/",
+    github: "https://github.com/Ashfaqurpapon/TechTip",
   },
-  {
-    num: "04",
-    category: "Frontend Project",
-    title: "Programming Guideline",
-    description:
-      "Design and develop a responsive, single-page web page using HTML, CSS, Bootstrap, and PHP to demonstrate proficiency in front-end web development",
-    stack: ["HTML", "CSS", "Bootstrap"],
-    image: "/project4.png",
-    live: "https://ashfaqurpapon.github.io/Programming_Guideline/",
-    github: "https://github.com/Ashfaqurpapon/Programming_Guideline",
-  },
+  // {
+  //   num: "03",
+  //   category: "React Project",
+  //   title: "Track Zone Clock",
+  //   description:
+  //     "Create a beautiful clock with its own timezone using React. Use custom hooks to manage time updates and timezone handling, then display the clock with a stylish component.",
+  //   stack: ["React", "Css 3", "JavaScript"],
+  //   image: "/project3.png",
+  //   live: "https://track-zone-clock.vercel.app/",
+  //   github: "https://github.com/Ashfaqurpapon/Track_Zone_Clock",
+  // },
+  // {
+  //   num: "04",
+  //   category: "Frontend Project",
+  //   title: "Programming Guideline",
+  //   description:
+  //     "Design and develop a responsive, single-page web page using HTML, CSS, Bootstrap, and PHP to demonstrate proficiency in front-end web development",
+  //   stack: ["HTML", "CSS", "Bootstrap"],
+  //   image: "/project4.png",
+  //   live: "https://ashfaqurpapon.github.io/Programming_Guideline/",
+  //   github: "https://github.com/Ashfaqurpapon/Programming_Guideline",
+  // },
 ];
 
 const services = [
@@ -84,40 +107,76 @@ const services = [
     num: "01",
     title: "Full-Stack Website Development",
     description:
-      "Expert full-stack developer skilled in building seamless web applications. With expertise in Express, Node.js, and React, I create efficient and responsive user interfaces with secure, reliable, and scalable backend operations.",
+      "Expert full-stack developer skilled in building seamless web applications. With expertise in Node.js, Express, and React, I deliver responsive user interfaces backed by secure, scalable, and high-performance server-side systems.",
   },
+  // {
+  //   num: "02",
+  //   title: "MERN Stack Development",
+  //   description:
+  //     "Specialized in developing robust MERN stack applications with a focus on clean architecture, reusable components, and smooth user experiences through modern, responsive UI design.",
+  // },
   {
     num: "02",
-    title: "MERN Stack Development",
+    title: "Backend & Microservices Architecture",
     description:
-      "Specialized in building visually engaging, user-centric interfaces with in-depth knowledge of React. I create responsive, interactive designs that provide smooth and enjoyable user experiences with clean, maintainable code.",
+      "Experienced in designing scalable backend systems using microservices architecture with NestJS, gRPC, Kafka, and Redis, ensuring reliable inter-service communication and performance optimization.",
   },
   {
     num: "03",
-    title: "Tech Tutor & Learner",
+    title: "Cloud & DevOps Deployment",
     description:
-      "Quick learner—adaptable and eager to absorb new concepts and technologies. I thrive in dynamic environments, rapidly picking up new skills and applying them effectively to deliver results efficiently.",
+      "Skilled in containerizing and deploying applications using Docker and cloud platforms, ensuring production-ready builds, efficient CI/CD workflows, and scalable infrastructure.",
   },
   {
     num: "04",
+    title: "Tech Tutor & Continuous Learner",
+    description:
+      "A fast learner with a passion for teaching and continuous improvement. I quickly adapt to new technologies and share knowledge to help teams grow and deliver impactful solutions.",
+  },
+  {
+    num: "05",
     title: "Competitive Programmer",
     description:
-      "Fueled by the thrill of solving complex algorithmic problems. With a solid foundation in data structures and algorithms, I approach challenges methodically and find optimized solutions.",
+      "Driven by solving complex algorithmic challenges with strong expertise in data structures and problem-solving techniques, enabling optimized and efficient code solutions.",
   },
+  {
+    num: "06",
+    title: "E-learning & SaaS Development",
+    description:
+      "Design and develop scalable e-learning and SaaS platforms with secure authentication, role-based access, and cloud deployment, optimized for performance and long-term growth.",
+  }
+
 ];
 
 const skills = [
-  { icon: <FaHtml5 />, name: "Html 5" },
-  { icon: <FaCss3 />, name: "CSS 3" },
+
   { icon: <FaJs />, name: "JavaScript" },
-  { icon: <FaReact />, name: "React" },
-  { icon: <FaNodeJs />, name: "NodeJS" },
-  { icon: <SiExpress />, name: "ExpressJS" },
-  { icon: <SiTailwindcss />, name: "Tailwindcss" },
+  { icon: <SiTypescript />, name: "Typescript" },
   { icon: <SiNextdotjs />, name: "NextJs" },
+  { icon: <SiNestjs />, name: "NestJs" },
+  { icon: <FaReact />, name: "React" },
   { icon: <SiRedux />, name: "Redux" },
   { icon: <SiDaisyui />, name: "Daisyui" },
   { icon: <SiShadcnui />, name: "Shadcnui" },
+  { icon: <SiTailwindcss />, name: "Tailwindcss" },
+
+  { icon: <FaNodeJs />, name: "NodeJS" },
+  { icon: <SiExpress />, name: "ExpressJS" },
+
+  { icon: <SiApachekafka />, name: "Apachekafka" },
+  { icon: <SiRedis />, name: "Redis" },
+
+  { icon: <SiMongodb />, name: "MongoDb" },
+  { icon: <SiMongoose />, name: "Mongoose" },
+  { icon: <SiPostgresql />, name: "PostgresSQL" },
+  { icon: <SiPrisma />, name: "Prisma" },
+
+  { icon: <SiDocker />, name: "Docker" },
+  { icon: <SiPostman />, name: "Postman" },
+  { icon: <SiSourcetree />, name: "Sourcetree" },
+
+
+
 ];
 
 const containerVariants = {
@@ -179,7 +238,7 @@ const Home = () => {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="text-xl md:text-2xl text-cyan-400 mb-6"
               >
-                Full-Stack Developer & Creative Problem Solver
+                SoftWare Engineer & Creative Problem Solver
               </motion.h3>
 
               <motion.p
@@ -197,7 +256,7 @@ const Home = () => {
                 transition={{ delay: 0.7, duration: 0.8 }}
                 className="flex flex-col sm:flex-row items-center gap-8 justify-center lg:justify-start"
               >
-                <a href="/cv.pdf" download="AR_Papon_CV.pdf">
+                <a href="/Ashfaqur_Rahman_Papon(CV).pdf" download="Ashfaqur_Rahman_Papon(CV).pdf">
                   <Button className="uppercase flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-6 text-lg">
                     <span>Download CV</span>
                     <FiDownload className="text-xl" />
@@ -242,10 +301,10 @@ const Home = () => {
 
           <motion.div variants={itemVariants} className="max-w-3xl mx-auto">
             <p className="text-white/70 text-lg leading-relaxed mb-6">
-              I'm Ashfaqur Rahman Papon, a dedicated full-stack developer with extensive experience in building dynamic web applications. I have a strong command over modern technologies like Next.js, React, Node.js, Express, and REST APIs.
+              I'm Ashfaqur Rahman Papon, a dedicated full-stack developer with extensive experience in building dynamic web applications. I have a strong command over modern technologies like Next.js, React, Node.js, Express,Microservice and REST APIs.
             </p>
             <p className="text-white/70 text-lg leading-relaxed">
-              With a keen eye for detail and a commitment to delivering high-quality work, I'm available for freelance opportunities. Fluent in both English and Bangla, I'm eager to collaborate on innovative projects that challenge my skills and foster growth.
+              With a keen eye for detail and a commitment to delivering high-quality work, I'm available for Full time/freelance opportunities. Fluent in both English and Bangla, I'm eager to collaborate on innovative projects that challenge my skills and foster growth.
             </p>
           </motion.div>
         </motion.div>
