@@ -203,7 +203,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* HERO SECTION */}
-      <section className="min-h-screen flex items-center justify-center py-20">
+      <section className="">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -223,12 +223,12 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
+                className="text-4xl md:text-4xl lg:text-5xl font-bold mb-4"
               >
                 Hello, I'm
                 <br />
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-                  AR. Papon
+                  Ashfaqur Papon
                 </span>
               </motion.h1>
 
