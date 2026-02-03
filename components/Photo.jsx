@@ -4,47 +4,28 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+          transition: { delay: 0.2, duration: 0.4, ease: "easeIn" },
         }}
+        className="relative"
       >
-        {/* image */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="w-[300px] h-[300px]  absolute xl:w-[480px] xl:h-[480px] "
-        >
-          <Image
-            src="/papon-removebg-preview.png"
-            priority
-            quality={100}
-            fill
-            alt=""
-            className="object-contain"
-          />
-        </motion.div>
-
-        {/* circle */}
-
+        {/* Animated circle border */}
         <motion.svg
-          className="w-[300px]  h-[300px] xl:w-[505px] xl:h-[506px] "
+          className="w-[300px] h-[300px] xl:w-[480px] xl:h-[480px] absolute"
           fill="transparent"
-          viewBox="0 -5 450 490"
+          viewBox="0 0 480 480"
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
-            cx="220"
-            cy="265"
-            r="200"
-            stroke="#00ff99"
-            strokeWidth="4"
+            cx="240"
+            cy="240"
+            r="220"
+            stroke="#06b6d4"
+            strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
@@ -59,6 +40,26 @@ const Photo = () => {
             }}
           />
         </motion.svg>
+
+        {/* Circular image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
+          }}
+          className="w-[300px] h-[300px] xl:w-[480px] xl:h-[480px] rounded-full overflow-hidden border-2 border-cyan-400/30 shadow-2xl shadow-cyan-500/20"
+        >
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/papon-QnomTqqShDBf9lUlOKSoKJlIfoKlgJ.jpeg"
+            priority
+            quality={100}
+            fill
+            alt="Ashfaqur Rahman Papon"
+            className="object-cover"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
